@@ -1,0 +1,8 @@
+{
+  "verbose": false,
+  "ignore": ["*.test.js", "./src/db/*"],
+  "execMap": {
+    "pde": "processing --sketch={{pwd}} --run"
+  }
+}
+
