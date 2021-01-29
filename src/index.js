@@ -46,9 +46,9 @@ app.post('/api/v1/getHash', async (req, res, next) => {
   }
 })  
 
-cron.schedule('* * * * *', function() {
-  //cronJob.batchPayPoll()
-  //console.log('running a task every minute');
+cron.schedule('30 * * * * *', function() {
+  cronJob.batchPayPoll()
+  console.log('running a task every minute');
 });
 
 app.listen(port, () => {
