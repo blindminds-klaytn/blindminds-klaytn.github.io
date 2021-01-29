@@ -741,7 +741,8 @@
       var shortAddr = addr.substring(0, 6) + "...." + addr.substring(addr.length -4);        
 
       if (addr.length == 42) {
-        return '<a target="_blank" style="text-decoration: underline;" href="' + explorer + '/address/' + addr + '">' + shortAddr +'</a>';
+        if (chainId != 1001) return '<a target="_blank" style="text-decoration: underline;" href="' + explorer + '/address/' + addr + '">' + shortAddr +'</a>';
+        else return '<a target="_blank" style="text-decoration: underline;" href="' + explorer + '/account/' + addr + '">' + shortAddr +'</a>';
       } else {
         return '<a target="_blank" style="text-decoration: underline;" href="' + explorer + '/tx/' + addr + '">' + shortAddr +'</a>'; 
       }
